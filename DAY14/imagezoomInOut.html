@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="div1" style="background-color: blue; height: 100px; width: 100px"></div>
+    <script>
+        $("document").ready(function(){
+            $("#div1").mouseenter(function(){
+                $("#div1").css("width", "350px");
+            });
+            $("#div1").mouseleave(function(){
+                $("#div1").css("width", "50px");
+            });
+        });
+    </script>
+</body>
+</html>

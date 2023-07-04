@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <input type="text" id="TxtTestFocus" placeholder="Check Text box focus event..."><br><br>
+    <input type="text" id="TxtTestBlur" placeholder="Check Text box focus event..."><br><br>
+    <input type="text" id="TxtTestKeyPress" placeholder="Check Text box focus event..."><br><br>
+    <input type="text" id="TxtTestKeyup" placeholder="Check Text box focus event..."><br><br>
+    
+    <script>
+        $(document).ready(function(){
+            $("#TxtTestFocus").focus(function(){
+                $(this).css("background-color", "red");
+            });
+            $("#TxtTestBlur").blur(function(){
+                $(this).css("background-color", "yellow");
+            });
+            $("#TxtTestKeyPress").keypress(function(){
+                alert($(this).val());
+            });
+            $("#TxtTestKeyup").keyup(function(){
+                alert($(this).val());
+            });
+        });
+
+    </script>
+</body>
+</html>

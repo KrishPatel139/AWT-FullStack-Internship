@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body style="background-color: #f6d3d3;">
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button><hr>
+    <button id="btnTogg">Hide</button><hr>
+    <button id="btnInc">+</button>
+    <button id="btnDec">-</button><hr><br>
+    <div id="div1" style="height: 300px; width: 300px; background-color: rgb(114, 237, 149);"></div><br>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnShow").attr("disabled", true);
+            
+            $("#btnHide").click(function(){
+                if(confirm("Are you sure...??")){
+                    $("#div1").hide(5000);
+                    $(this).attr("disabled", true);
+                    $("#btnShow").attr("disabled", false);
+                    $("#btnTogg").text("Show");
+                }
+            })
+    
+            $("#btnShow").click(function(){
+                if(confirm("Are you sure...??")){
+                    $("#div1").show(5000);
+                    $(this).attr("disabled", true);
+                    $("#btnHide").attr("disabled", false);
+                    $("#btnTogg").text("Hide");
+                }
+            });
+
+            $("#btnTogg").click(function(){
+                if(confirm("Are you sure..??"))
+                {
+                    $("#div1").toggle(5000);
+                    ($(this).text()=="Hide")
+                        ?($(this).text("Show"),$("#btnHide").attr("disabled",true),$("#btnShow").attr("disabled",false))
+                        :($(this).text("Hide"),$("#btnHide").attr("disabled",false),$("#btnShow").attr("disabled",true))
+                }
+            });
+            
+            $("#btnInc").click(function(){
+                var x=parseInt($("#div1").css("height"));
+                if(x<=800)
+                {
+                    x+=10;
+                    $("#div1").css("height",x);
+                    $("#div1").css("width",x);
+                }
+                else{
+                    alert("More than 800px is not possible.");
+                }
+            });
+            
+            $("#btnDec").click(function(){
+                var x=parseInt($("#div1").css("height"));
+                if(x>=20)
+                {
+                    x-=10;
+                    $("#div1").css("height",x);
+                    $("#div1").css("width",x);
+                }
+                else{
+                    alert("Less than 20px is not possible.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
