@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ UI</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#div1").draggable();
+
+            $("#div2 span").draggable({
+                containtment: "#div2"
+            });
+
+            $("#div3 span").draggable({
+                axis: "x"
+            });
+
+            $("#div4 span").draggable({
+                axis: "y"
+            });
+
+            $("#div5 span").draggable({
+                distance: 200
+            });
+
+            $("#div6 span").draggable({
+                delay: 100
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1" style="height: 200px; width: 200px; background-color: rgb(225, 196, 99)"><span>Something</span></div><hr>
+    <div id="div2" style="height: 200px; width: 200px; background-color: rgb(225, 196, 99)"><span>Nothing</span></div><hr>
+    <div id="div3" style="height: 200px; width: 200px; background-color: rgb(225, 196, 99)"><span>IDK</span></div><hr>
+    <div id="div4" style="height: 200px; width: 200px; background-color: rgb(225, 196, 99)"><span>Kuch Bhi</span></div><hr>
+    <div id="div5" style="height: 200px; width: 200px; background-color: rgb(225, 196, 99)"><span>Kaise bhi</span></div><hr>
+    <div id="div6" style="height: 200px; width: 700px; background-color: rgb(225, 196, 99)"><span>Pata nahi kaise</span></div>
+</body>
+</html>
