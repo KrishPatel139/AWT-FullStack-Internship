@@ -1,0 +1,37 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>Tabs</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <script>  
+        $(function() {  
+            $( "#tabs-1" ).tabs();  
+        });  
+      </script>  
+      <style>  
+        #tabs-1{
+            font-size: 14px;
+        }  
+        .ui-widget-header {  
+            background:rgb(232, 210, 176);  
+            border: 1px solid #b9cd6d;  
+            color: lightyellow; 
+        }  
+      </style>  
+   </head>  
+   <body>  
+      <div id="tabs-1">  
+        <ul>  
+            <li><a href="#tabs-2">TAB 1</a></li>  
+            <li><a href="#tabs-3">TAB 2</a></li>  
+            <li><a href="#tabs-4">TAB 3</a></li>  
+        </ul>  
+        <div id="tabs-2"><p>IDK</p></div>  
+        <div id="tabs-3"><p>Nothing</p></div>  
+        <div id="tabs-4"><p>Something</p></div>  
+      </div>  
+   </body>  
+</html>

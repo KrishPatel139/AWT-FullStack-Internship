@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>
+        #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+        #sortable li span { position: absolute; margin-left: -1.3em; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".sortable1").sortable();
+            $(".sortable2").sortable();
+            $(".sortable1").sortable({
+                continueWith:".sortable1, .sortable2"
+            });
+            $(".sortable2").sortable({
+                continueWith:".sortable2, .sortable1"
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>List1</h1>
+    <div class="sortable1">
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 1</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 2</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 3</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 4</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 5</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 6</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 7</div><br>
+    </div>
+    
+    <hr>
+    <h1>List2</h1>
+    <div class="sortable2">
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 1</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 2</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 3</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 4</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 5</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 6</div><br>
+        <div style="height: 25px; width: auto; background-color:aquamarine">Item 7</div><br>
+    </div>
+</body>
+</html>
